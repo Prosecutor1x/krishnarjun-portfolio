@@ -14,27 +14,27 @@
     /* --color-dark-3: #a2a2a2; */
 
     /* Light Theme */
-    --color-bg: theme(colors.red.50);
-    --color-bg-secondary: theme(colors.red.200);
-    --color-accent: theme(colors.pink.500);
-    --color-accent-light: theme(colors.pink.500/0.1);
-    --color-accent-torch: theme(colors.pink.700/0.15);
-    --color-text: theme(colors.red.600);
-    --color-dark-1: theme(colors.red.900);
-    --color-dark-2: theme(colors.red.700);
-    --color-dark-3: theme(colors.red.300);
+    --color-bg: theme(colors.blue.50);
+    --color-bg-secondary: theme(colors.blue.200);
+    --color-accent: theme(colors.blue.600);
+    --color-accent-light: theme(colors.blue.600/0.1);
+    --color-accent-torch: theme(colors.blue.700/0.15);
+    --color-text: theme(colors.blue.700);
+    --color-dark-1: theme(colors.blue.950);
+    --color-dark-2: theme(colors.blue.800);
+    --color-dark-3: theme(colors.blue.300);
   }
 
   /* Dark Theme */
   .dark {
-    --color-bg: theme(colors.red.900);
-    --color-bg-secondary: theme(colors.red.700);
-    --color-accent: theme(colors.pink.400);
-    --color-accent-light: theme(colors.pink.400/0.1);
-    --color-text: theme(colors.red.400);
-    --color-dark-1: theme(colors.red.200);
-    --color-dark-2: theme(colors.red.300);
-    --color-dark-3: theme(colors.red.700);
+    --color-bg: theme(colors.blue.950);
+    --color-bg-secondary: theme(colors.blue.800);
+    --color-accent: theme(colors.blue.400);
+    --color-accent-light: theme(colors.blue.400/0.1);
+    --color-text: theme(colors.blue.300);
+    --color-dark-1: theme(colors.blue.100);
+    --color-dark-2: theme(colors.blue.200);
+    --color-dark-3: theme(colors.blue.800);
   }
 
   @font-face {
@@ -47,7 +47,7 @@
   }
 
   ::selection {
-    @apply dark:bg-red-600/30 bg-red-400/30 text-accent;
+    @apply dark:bg-blue-600/30 bg-blue-400/30 text-accent;
   }
 }
 

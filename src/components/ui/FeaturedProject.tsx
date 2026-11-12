@@ -17,6 +17,10 @@ const FeaturedProject = ({
   name,
   url,
   repo,
+  frontendRepo,
+  backendRepo,
+  imageCredit,
+  imageSource,
   description,
   tasks = '',
   tags = [],
@@ -55,6 +59,16 @@ const FeaturedProject = ({
               placeholder="blur"
               blurDataURL={blurImageURL}
             />
+            {imageCredit && imageSource && (
+              <a
+                href={imageSource}
+                target="_blank"
+                rel="noreferrer"
+                className="absolute bottom-0 left-0 right-0 z-20 bg-black/60 px-2 py-1 text-left text-[10px] text-white"
+              >
+                {imageCredit}
+              </a>
+            )}
             <Link href={url} target="_blank" className="absolute inset-0 z-10 block bg-transparent" />
           </div>
 
@@ -88,14 +102,35 @@ const FeaturedProject = ({
               ))}
             </div>
 
-            {repo && (
+            {(repo || frontendRepo || backendRepo) && (
               <div className="flex items-center gap-3 mt-3">
-                <a href={repo} className="hover:text-accent" target="_blank">
-                  <Icon icon="tabler:brand-github" width={22} height={22} />
-                </a>
-                <a href={url} className="hover:text-accent" target="_blank">
-                  <Icon icon="ci:external-link" width={24} height={24} />
-                </a>
+                {frontendRepo || backendRepo ? (
+                  <>
+                    {frontendRepo && (
+                      <a href={frontendRepo} className="flex items-center gap-1 hover:text-accent" target="_blank" rel="noreferrer">
+                        <Icon icon="tabler:brand-github" width={20} height={20} /> Frontend
+                      </a>
+                    )}
+                    {backendRepo && (
+                      <a href={backendRepo} className="flex items-center gap-1 hover:text-accent" target="_blank" rel="noreferrer">
+                        <Icon icon="tabler:brand-github" width={20} height={20} /> Backend
+                      </a>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    {repo && (
+                      <a href={repo} className="hover:text-accent" target="_blank" rel="noreferrer">
+                        <Icon icon="tabler:brand-github" width={22} height={22} />
+                      </a>
+                    )}
+                    {url !== repo && (
+                      <a href={url} className="hover:text-accent" target="_blank" rel="noreferrer">
+                        <Icon icon="ci:external-link" width={24} height={24} />
+                      </a>
+                    )}
+                  </>
+                )}
               </div>
             )}
           </div>

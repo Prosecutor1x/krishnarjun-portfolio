@@ -2,8 +2,46 @@ import { FeaturedProjectsSectionType } from '@/lib/types/sections';
 import { getId } from '@/lib/utils/helper';
 
 const featuredProjectsSection: FeaturedProjectsSectionType = {
-  title: "projects i've worked on",
+  title: 'selected projects',
   projects: [
+    {
+      id: getId(),
+      name: 'Lawboard - Law Firm ERP',
+      description: 'A case and client management ERP built for law firms.',
+      tasks:
+        'Managed 500+ legal cases with multi-role workflows and activity tracking, Designed a Firestore data model with audit logging, Automated updates and notifications with Google Cloud Functions',
+      url: 'https://github.com/Prosecutor1x/Lawboard',
+      repo: 'https://github.com/Prosecutor1x/Lawboard',
+      img: 'https://images.unsplash.com/photo-1767972463877-b64ba4283cd0?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1200',
+      imageCredit: 'Photo by Sasun Bughdaryan on Unsplash',
+      imageSource: 'https://unsplash.com/photos/wooden-gavel-resting-on-a-dark-surface-next-to-book-FaTLrG5-ViE',
+      tags: ['Next.js', 'Firebase', 'Cloud Functions'],
+    },
+    {
+      id: getId(),
+      name: 'Agro-Scans - Plant Disease Classification',
+      description: 'An AI-assisted plant disease classification and diagnosis project.',
+      tasks:
+        'Trained a VGG-based model on 10,000+ images, Deployed real-time inference with Next.js and Flask, Generated diagnostic reports with a small LLaMA model',
+      url: 'https://github.com/Prosecutor1x/Agro-Scans',
+      repo: 'https://github.com/Prosecutor1x/Agro-Scans',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/2/28/Kohlrabi_Alternaria_Befall-2-DLR-NW-jk.jpg',
+      imageCredit: 'Photo by Jochen Kreiselmaier (CC BY-SA 4.0)',
+      imageSource: 'https://commons.wikimedia.org/wiki/File:Kohlrabi_Alternaria_Befall-2-DLR-NW-jk.jpg',
+      tags: ['Python', 'Flask', 'VGG16', 'PostgreSQL', 'Docker'],
+    },
+    {
+      id: getId(),
+      name: 'Bongobashi - Citizen Connect Portal',
+      description: 'A portal for reporting local issues and tracking their progress.',
+      tasks:
+        'Built REST APIs for complaint tracking and status changes, Added AWS S3 storage for submitted documents, Developed the citizen facing portal with Next.js',
+      url: 'https://github.com/Prosecutor1x/citizen-connect-frontend',
+      frontendRepo: 'https://github.com/Prosecutor1x/citizen-connect-frontend',
+      backendRepo: 'https://github.com/Prosecutor1x/citizen-connect-backend',
+      img: '/projects/bongobashi-home.png',
+      tags: ['Next.js', 'Go', 'MongoDB', 'AWS S3'],
+    },
     {
       id: getId(),
       name: 'GetLifeGuard',

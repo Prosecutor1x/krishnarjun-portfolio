@@ -31,7 +31,11 @@ export type ProjectType = {
   year: number;
   img: string;
   tags: string[];
-  repo: string;
+  repo?: string;
+  frontendRepo?: string;
+  backendRepo?: string;
+  imageCredit?: string;
+  imageSource?: string;
 };
 
 export interface FeaturedProjectType

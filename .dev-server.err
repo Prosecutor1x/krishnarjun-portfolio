@@ -1,0 +1,4 @@
+ ⨯ The requested resource "https://life-kit.vercel.app/images/og.png" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+ ⨯ upstream image response failed for https://www.valuemetrix.io/images/og.png 404
+ ⨯ The requested resource "https://life-kit.vercel.app/images/og.png" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+ ⨯ upstream image response failed for https://www.valuemetrix.io/images/og.png 404
